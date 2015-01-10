@@ -3,7 +3,7 @@ require "spec_helper"
 describe "Admin::Entries", type: :request do
   include Rack::Test::Methods
 
-  let(:env) do
+  let(:env_hash) do
     { "HTTP_ACCEPT" => "application/json" }
   end
 
@@ -31,7 +31,7 @@ describe "Admin::Entries", type: :request do
   describe "GET /admin/entries" do
     context "with Rack::Test", autodoc: true do
       it "returns entries" do
-        get "/admin/entries", params, env
+        get "/admin/entries", params, env_hash
         expect(last_response.status).to eq(200)
       end
     end
