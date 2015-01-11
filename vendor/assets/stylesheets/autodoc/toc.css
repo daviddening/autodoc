@@ -1,0 +1,50 @@
+.api-docs {
+  left: 210px
+}
+
+.api-docs, .api-docs-toc {
+  width: 66%
+
+  pre {
+    border: 1px solid gray;
+    margin-bottom: 0;
+    margin-top: -1px;
+    padding: $base_padding;
+    white-space: pre-wrap;
+  }
+}
+
+.tocify-wrapper {
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: fixed;
+  width: 210px;
+  float: left;
+  font-size: 16px;
+
+  li {
+    list-style-type: none;
+
+    a {
+      color: gray;
+      height: 100%;
+      width: 100%;
+      display: block;
+      padding: 5px 10px;
+
+      &:hover {
+        border-radius: 10px;
+        background-color: #e0e4e5;
+        color: #00a79f;
+      }
+    }
+
+  }
+}
+
+.page-wrapper {
+  margin-left: 240px;
+  min-width: 700px;
+  position: relative;
+  z-index: 10;
+}
